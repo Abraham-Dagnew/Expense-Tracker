@@ -29,6 +29,10 @@ namespace Expense_Tracker.Controllers
         {
             return RedirectToAction("Expenses");
         }
+        public IActionResult Login()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
