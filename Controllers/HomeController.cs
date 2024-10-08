@@ -33,6 +33,14 @@ namespace Expense_Tracker.Controllers
         {
             return View();
         }
+        public IActionResult Signup()
+        {
+            return View();
+        }
+        public IActionResult Contact()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
