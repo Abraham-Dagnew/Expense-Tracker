@@ -20,6 +20,7 @@ namespace Expense_Tracker
 
             builder.Services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
+
             builder.Services.AddIdentity<Users, IdentityRole>(options =>
             {
                 options.Password.RequireNonAlphanumeric = false;
@@ -31,8 +32,9 @@ namespace Expense_Tracker
                 options.SignIn.RequireConfirmedEmail = false;
                 options.SignIn.RequireConfirmedPhoneNumber = false;
             })
-            .AddEntityFrameworkStores<AppDbContext>()
-            .AddDefaultTokenProviders();
+                .AddEntityFrameworkStores<AppDbContext>()
+                .AddDefaultTokenProviders();
+
 
 
 
