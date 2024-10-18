@@ -1,88 +1,62 @@
-﻿@using Expense_Tracker.Models.ViewModels;
-@model LoginViewModel;
+﻿@using Expense_Tracker.Models.ViewModels
+@model LoginViewModel
 
 @{
-    ViewData["Title"] = "Log in";
-    Layout = null;
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_AccountLayout.cshtml";
 }
 
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-    <link rel="stylesheet" href="~/css/styles.css" />
-</head>
-<body>
-    <div class="text-center">
-        <div class="container" id="signIn">
-            <h1 class="form-title">Sign In</h1>
-            <form asp-action="Login" method="post">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <div class="input-group">
-                    <i class="fas fa-envelope"></i>
-                    <input asp-for="Email" id="email" placeholder="Email" required />
-                    <label for="email">Email</label>
-                    <span asp-validation-for="Email" class="text-danger"></span>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-lock"></i>
-                    <input asp-for="Password" id="password" placeholder="Password" required />
-                    <label for="password">Password</label>
-                    <span asp-validation-for="Password" class="text-danger"></span>
-                </div>
-                <p class="recover">
-                    <a asp-controller="Account" asp-action="VerifyEmail">Forgot Password?</a>
-                    <input type="submit" class="btn" value="Sign In" name="signIn" />
-                </p>
-            </form>
-            <p class="or">SIGN UP WITH</p>
-            <div class="icons">
-                <i class="fab fa-google"></i>
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-apple"></i>
-            </div>
-            <div class="links">
-                <p>Don't have an account?</p>
-                <button id="signUpButton">Sign Up</button>
-            </div>
-        </div>
+<div class="account-container">
+    <div class="account-box">
+        <h2 class="text-center mb-4">Login</h2>
 
-        <div class="container" id="signup" style="display: none;">
-            <h1 class="form-title">Register</h1>
-            <form method="post" action="">
-                <div class="input-group">
-                    <i class="fas fa-user"></i>
-                    <input type="text" name="Name" id="name" placeholder="Name" required />
-                    <label for="name">Name</label>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-envelope"></i>
-                    <input type="email" id="email" placeholder="Email" required />
-                    <label for="email">Email</label>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" id="password" placeholder="Password" required />
-                    <label for="password">Password</label>
-                </div>
-                <input type="submit" class="btn" value="Sign Up" name="signup" />
-            </form>
-            <p class="or">SIGN UP WITH</p>
-            <div class="icons">
-                <i class="fab fa-google"></i>
-                <i class="fab fa-facebook"></i>
-                <i class="fab fa-apple"></i>
+        <form asp-action="Login" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
             </div>
-            <div class="links">
-                <p>Already Have an Account?</p>
-                <button id="signInButton">Sign In</button>
-            </div>
-        </div>
-    </div>
-    <div class="form-action">
-        <a asp-controller="Home" asp-action="Index" class="text-decoration-none">Back</a>
-    </div>
 
-    <script src="~/js/script.js"></script>
-</body>
-</html>
+            <div class="mb-3">
+                <label asp-for="Password" class="form-label"></label>
+                <input asp-for="Password" type="password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+
+            <div class="float-end">
+                <a asp-controller="Account" asp-action="VerifyEmail" class="text-decoration-none">Forgot password?</a>
+            </div>
+
+            <div class="form-check mb-3">
+                <input asp-for="RememberMe" class="form-check-input" />
+                <label asp-for="RememberMe" class="form-check-label">
+                    @Html.DisplayNameFor(model => model.RememberMe)
+                </label>
+            </div>
+
+            <input type="submit" value="Login" class="btn btn-success w-100 p-2" />
+
+            <div class="text-center mt-3">
+                <p class="or">OR SIGN IN WITH</p>
+                <div class="icons">
+                    
+                </div>
+            </div>
+
+            <p class="text-center mt-2">
+                Don't have an account? 
+                <a asp-controller="Account" asp-action="Register" class="text-decoration-none">Signup</a>
+            </p>
+
+            <div class="text-center mt-3">
+                <a asp-controller="Account" asp-action="Login" class="text-decoration-none">Back</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

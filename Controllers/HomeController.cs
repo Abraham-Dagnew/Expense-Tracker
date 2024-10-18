@@ -65,14 +65,7 @@ namespace Expense_Tracker.Controllers
             _context.SaveChanges();
             return RedirectToAction("Expenses");
         }
-        public IActionResult Login()
-        {
-            return View();
-        }
-        public IActionResult Signup()
-        {
-            return View();
-        }
+        
         public IActionResult Contact()
         {
             return View();
