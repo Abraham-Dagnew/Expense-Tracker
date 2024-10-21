@@ -1,31 +1,27 @@
-﻿
-@{
-    ViewData["Title"] = " Contact";
+﻿@{
+    ViewData["Title"] = "Contact";
 }
+<link rel="stylesheet" href="~/css/Contacts.css">
 
-<link rel="stylesheet" href="~/css/contact.css">
-
-<section class="contact-form">
-    <div class="form-container">
-        <form action="#" method="post">
-            
-            <h1>Contact</h1>
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Name" required>
-
+<div class="container">
+    <h1 class="form-title">Contact Us</h1>
+    <form id="contact-form">
+        <div class="input-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name" />
+        </div>
+        <div class="input-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Email" required>
-
+            <input type="email" id="email" name="email" required placeholder="Enter your email" />
+        </div>
+        <div class="input-group">
             <label for="message">Message</label>
-            <textarea type="message" id="message" name="message" rows="4" placeholder="Message"></textarea>
-            <button type="submit" class="submit-button">Submit</button>
-        </form>
+            <textarea id="message" name="message" rows="4" required placeholder="Your message"></textarea>
+        </div>
+        <button type="submit" class="btn">Submit</button>
         <div class="text-center mt-2">
             <a asp-controller="Home" asp-action="Index" class="text-decoration-none mt-3">Back</a>
         </div>
-
-    </div>
-</section>
-
-
-
+        
+    </form>
+</div>
