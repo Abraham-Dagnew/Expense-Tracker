@@ -13,8 +13,8 @@ body {
 
 .container {
     background: #fff;
-    width: 90%; /* Make the width responsive */
-    max-width: 600px; /* Set a max width */
+    width: 90%; 
+    max-width: 600px; 
     padding: 1.5rem;
     margin: 50px auto;
     border-radius: 10px;
@@ -26,25 +26,25 @@ body {
     font-weight: bold;
     text-align: center;
     margin-bottom: 1rem;
-    color: #333; /* Darker color for better contrast */
+    color: #333;
 }
 
 .input-group {
-    margin-bottom: 1.5rem; /* Space between input groups */
+    margin-bottom: 1.5rem; 
 }
 
 label {
     color: #757575;
     font-size: 0.9rem;
     display: block;
-    margin-bottom: 0.5rem; /* Space between label and input */
+    margin-bottom: 0.5rem; 
 }
 
 input,
 textarea {
     width: 100%;
-    padding: 10px; /* Padding for better touch target */
-    border: 1px solid #ccc; /* Light border */
+    padding: 10px; 
+    border: 1px solid #ccc; 
     border-radius: 5px;
     font-size: 1rem;
     transition: border-color 0.3s;
@@ -53,7 +53,7 @@ textarea {
     input:focus,
     textarea:focus {
         border-color: hsl(327, 90%, 28%);
-        outline: none; /* Remove outline */
+        outline: none; 
     }
 
 button.btn {
@@ -64,18 +64,16 @@ button.btn {
     background: rgb(0, 0, 0);
     color: white;
     cursor: pointer;
-    width: 100%; /* Full width */
+    width: 100%; 
     transition: background 0.3s;
 }
 
     button.btn:hover {
-        background: #07001f; /* Darker background on hover */
+        background: #07001f; 
     }
-
-/* Responsive styles */
 @media (max-width: 768px) {
     .container {
-        width: 95%; /* Adjust container width for smaller screens */
+        width: 95%; 
         margin: 20px auto;
     }
 }
