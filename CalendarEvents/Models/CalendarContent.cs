@@ -1,8 +1,12 @@
-﻿namespace Expense_Tracker.CalendarEvents.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Expense_Tracker.CalendarEvents.Models
 {
     public class CalendarContent
     {
+        [Key]
         public int BookingId { get; set; }
+
         public string Subject { get; set; }
         public string Description { get; set; }
         public System.DateTime Start { get; set; }
