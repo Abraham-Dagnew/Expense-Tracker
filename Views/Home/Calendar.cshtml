@@ -179,7 +179,6 @@
             }
 
             $('#btnEdit').click(function () {
-                //Open modal dialog for edit event
                 openAddEditForm();
             })
 
@@ -191,7 +190,6 @@
                         data: { 'bookingId': selectedEvent.bookingId },
                         success: function (result) {
                             if (result) {
-                                //Refresh the calender
                                 FetchEventAndRenderCalendar();
                                 $('#myModal').modal('hide');
                             }
@@ -232,7 +230,6 @@
             }
 
             $('#btnSave').click(function () {
-                //Validation/
                 if ($('#txtSubject').val().trim() == "") {
                     alert('Subject required');
                     return;
@@ -264,7 +261,6 @@
                     FullDay: $('#chkIsFullDay').is(':checked')
                 }
                 SaveBooking(data);
-                // call function for submit data to the server
             })
 
             function SaveBooking(data) {
@@ -274,7 +270,6 @@
                     data: data,
                     success: function (result) {
                         if (result) {
-                            //Refresh the calender
                             FetchEventAndRenderCalendar();
                             $('#myModalSave').modal('hide');
                         }
