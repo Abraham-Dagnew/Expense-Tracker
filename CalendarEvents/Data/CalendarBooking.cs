@@ -19,7 +19,6 @@ namespace Expense_Tracker.CalendarEvents.Data
         {
             if (booking.BookingId > 0)
             {
-                //Update the booking
                 var v = _db.Bookings.Where(a => a.BookingId == booking.BookingId).FirstOrDefault();
                 if (v != null)
                 {

@@ -13,7 +13,6 @@ namespace Expense_Tracker
             {
                 var builder = WebApplication.CreateBuilder(args);
 
-                // Add services to the container.
                 builder.Services.AddControllersWithViews();
                 builder.Services.AddDbContext<ExpensesDB>(options =>
                     options.UseInMemoryDatabase("ExpensesDB")
