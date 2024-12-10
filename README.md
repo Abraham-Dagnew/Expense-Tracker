@@ -12,7 +12,7 @@ The application uses:
 ### User Authentication and Profile Management
 - **Signup/Login**: Account creation and login.
 - **Forgot Password**: Allows users to reset their password.
-- **Edit Profile**: Users can edit email and change their password.
+- **Edit Profile**: Users can edit previous email and change their password.
 
 ### Expense Tracking
 - **Add, Edit, and Delete Expenses**: Manage expense details like amount, category, and date.
