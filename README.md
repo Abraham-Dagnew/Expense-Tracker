@@ -14,7 +14,7 @@ The application uses:
 - **Forgot password**: Allows users to reset their password.
 - **Edit Profile**: Users can edit previous email and change their password.
 
-### Expense Tracking
+### Expense Tracking Feautures
 - **Add, Edit, and Delete Expenses**: Manage expense details like amount, category, and date.
 - **View Expenses**: Display expenses in an organized list.
 
