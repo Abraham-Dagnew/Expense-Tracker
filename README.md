@@ -1,6 +1,6 @@
 # Expense Tracker 
 
-## Project Overview
+## Overview
 **Expense Tracker Web Application** built using **.NET MVC8**. It allows users to track expenses, manage profiles, and handle account login and password management.
 
 The application uses:
