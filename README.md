@@ -24,7 +24,7 @@ The application uses:
 - **In-Memory Database**: Stores expense data.
 - **Microsoft SQL Server**: Manages user authentication.
 - **HTML/CSS/JavaScript**: For frontend development.
-- **Bootstrap**: Responsive layout and styling
+- **Bootstrap**: Responsive layout and styling.
 
 
 
