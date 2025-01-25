@@ -21,7 +21,6 @@ The application uses:
 ## Technologies Used
 - **.NET MVC 8**: Core framework for building the application.
 - **Entity Framework Core**: For data management.
-- **In-Memory Database**: Stores expense data.
 - **Microsoft SQL Server**: Manages user authentication.
 - **HTML/CSS/JavaScript**: For frontend development.
 - **Bootstrap**: Responsive layout and styling.
