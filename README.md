@@ -19,7 +19,7 @@ The application uses:
 - **View Expenses**: Display expenses in an organized list.
 
 ## Technologies Used
-- **.NET MVC 8**: Core framework for building the application.
+- **.NET MVC8**: Core framework for building the application.
 - **Entity Framework Core**: For data management.
 - **Microsoft SQL Server**: Manages user authentication.
 - **HTML/CSS/JavaScript**: For frontend development.
